@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <h5 class="text-center mb-5">
+        EDIT NOTE
+    </h5>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <form (ngSubmit)="saveNote()">
+            <div class="form-group">
+                <label for="title">User:</label>
+                <input type="text" class="form-control mb-3" id="title" name="user" [value]="user" readonly>
+            </div>
+            <div class="form-group">
+                <label for="content">Content:</label>
+                <textarea class="form-control mb-3" id="content" rows="3" [(ngModel)]="content" name="content"
+                    required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Save</button>
+        </form>
+    </div>
+
+    <!-- Toast de error -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="errorToast" class="toast align-items-center text-white bg-danger border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    An error has ocurred!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast de éxito -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="successToast" class="toast align-items-center text-white bg-success border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Note edited successfully!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+</div>

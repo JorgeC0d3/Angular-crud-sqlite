@@ -1,0 +1,17 @@
+<div class="card shadow">
+    <div class="card-body">
+        {{ note.content }}
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-sm btn-primary" (click)="onEditNote(note.id)">Edit</button>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="d-flex justify-content-between align-items-center">
+            <span>Posted by: {{ note.user }}</span>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="mx-3">{{ note.date | date:'dd MMM, yyyy' }}</span>
+                <button type="submit" class="btn btn-close" (click)="onDeleteNote(note.id)"></button>
+            </div>
+        </div>
+    </div>
+</div>

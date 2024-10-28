@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'material-design-icons-iconfont/dist/material-design-icons.css';
+
+body {
+    background: #D3CCE3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: #232526;
+}
+
+nav {
+    background: #232526;
+    /* fallback for old browsers */
+}
+
+.link {
+    text-decoration: none;
+    color: #ededed;
+}
+
+.link:hover {
+    color: #a1a1a1;
+}
+
+.form-group{
+    width: 350px;
+}

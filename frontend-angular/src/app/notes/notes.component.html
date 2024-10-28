@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <h5 class="text-center mb-5">
+        NOTES
+    </h5>
+
+    <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4">
+
+        @for(note of notes; track note.id){
+            <div class="col-lg-4 mb-3">
+                <app-note [note] = "note" (addDeleteEvent)="deleteNote($event)" (addEditEvent)="editNote($event)" />
+            </div>
+        }
+ 
+    </div>
+
+    <!-- Toast de éxito -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="successToast" class="toast align-items-center text-white bg-success border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Note deleted successfully!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast de error -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="errorToast" class="toast align-items-center text-white bg-danger border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    An error has ocurred!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+</div>
